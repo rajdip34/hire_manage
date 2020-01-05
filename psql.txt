@@ -1,0 +1,9 @@
+CREATE DATABASE hire_manage;
+CREATE USER notroot WITH PASSWORD '#notroot#';
+
+ALTER ROLE notroot SET client_encoding TO 'utf8';
+ALTER ROLE notroot SET default_transaction_isolation TO 'read committed';
+ALTER ROLE notroot SET timezone TO 'UTC';
+
+GRANT ALL PRIVILEGES ON DATABASE hire_manage TO notroot;
+
